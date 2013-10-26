@@ -12,6 +12,8 @@ class HeroesController < ApplicationController
 
   def show
     @hero = Hero.find(params[:id])
+    @picture = @hero.pictures.new
+    @pictures = @hero.pictures.all
   end
 
   def update

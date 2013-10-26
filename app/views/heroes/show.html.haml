@@ -4,7 +4,13 @@
 = simple_form_for [@hero.campaign, @hero] do |f|
   = f.hidden_field :like_count, value: 1
   = f.submit "Vote"
+%h4 Gallery
+- @pictures.each do |picture|
+  = image_tag picture.image_url(:thumb) if picture.image?
 
+= simple_form_for [@hero.campaign, @hero, @picture] do |f|
+  = f.input :image
+  = f.submit
 = link_to "Add a story", new_campaign_hero_story_path(@hero.campaign, @hero)
 
 - @hero.stories.each do |story|
