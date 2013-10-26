@@ -1,0 +1,5 @@
+%h1= "Why did you nominate #{@hero.name}?"
+
+= form_for [@campaign, @hero, @story] do |f|
+	= f.text_area :body
+	= f.submit
