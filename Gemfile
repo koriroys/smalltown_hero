@@ -9,6 +9,8 @@ gem "jquery-rails"
 gem "haml-rails"
 gem "turbolinks"
 gem "simple_form"
+gem "rmagick"
+gem "carrierwave"
 
 group :development do
   gem "better_errors"
