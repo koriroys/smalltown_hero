@@ -4,6 +4,10 @@
 = simple_form_for [@hero.campaign, @hero] do |f|
   = f.hidden_field :like_count, value: 1
   = f.submit "Vote"
+
+%a.twitter-share-button.left{"data-count" => "horizontal", "data-text" => "#{@hero.name} is a awesome person! Go vote here: #{request.original_url}", "data-via" => "smalltown_hero", :href => "http://twitter.com/share"} Tweet
+%script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
+
 %h4 Gallery
 - @pictures.each do |picture|
   = image_tag picture.image_url(:thumb) if picture.image?
