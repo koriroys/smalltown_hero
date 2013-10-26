@@ -1,13 +1,13 @@
 %h1= "#{@hero.name}"
 %h3= "#{@hero.like_count} likes"
 
-= form_for [@hero.campaign, @hero] do |f|
-	= f.hidden_field :like_count, value: 1
-	= f.submit "Vote"
+= simple_form_for [@hero.campaign, @hero] do |f|
+  = f.hidden_field :like_count, value: 1
+  = f.submit "Vote"
 
 = link_to "Add a story", new_campaign_hero_story_path(@hero.campaign, @hero)
 
 - @hero.stories.each do |story|
-	%ul
-		%li
-			= story.body
+  %ul
+    %li
+      = story.body
