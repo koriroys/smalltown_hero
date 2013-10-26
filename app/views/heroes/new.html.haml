@@ -1,5 +1,5 @@
-%h1 Nominate a Hero
+- content_for(:title, "#{@campaign.title}")
 
-= simple_form_for [@campaign, @hero] do |f|
-  = f.input :name
-  = f.submit "Nominate a Hero"
+= simple_form_for [@campaign, @hero], html_options: { style: "margin: 20px;"} do |f|
+  = f.input :name, placeholder: "name", label: false, input_html: { style: "width: 200px;"}
+  = f.submit "Nominate a Hero", class: :button

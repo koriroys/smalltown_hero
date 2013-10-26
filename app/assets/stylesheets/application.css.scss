@@ -17,9 +17,11 @@
 $dark:    #343838;
 $dark-80: #005F6B;
 $dark-50: #008C9E;
-$dark-20: #00B4CC;
-$dark-0:  #00DFFC;
+// $dark-20: #00B4CC;
+$dark-20: #DDD;
+// $dark-0:  #00DFFC;
 $text-color: #FF5C00;
+$max-width: 100%;
 
 .button {
   @include button($dark);
@@ -42,11 +44,47 @@ body {
   line-height: normal;
 }
 
-html {
-  @include linear-gradient(to top, $dark, $dark-20);
+header {
+  @include span-columns(12);
+  background-color: $text-color;
+  // width: 1016px;
+  height: 200px;
+  .banner {
+    @include span-columns(4 of 12);
+  }
+  .title {
+    @include span-columns(8 of 12);
+    @include omega();
+    margin-top: 150px;
+    font-size: 3.0em;
+    font-weight: bold;
+  }
 }
 
+
+// html {height:100% }
 html {
-  height:100%
+  min-height: 100%;
+  @include linear-gradient(to top, $dark-20, $dark);
+}
+
+.container {
+  @include outer-container;
+  margin: 0px;
+
+  .content {
+    @include span-columns(12);
+    padding: 10px;
+
+    .nominees {
+      li.block {
+        @include span-columns(4);
+        @include omega(3n);
+        .button {
+          width: 200px;
+        }
+      }
+    }
+  }
 }
 

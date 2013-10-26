@@ -1,5 +1,7 @@
-%h1= "Why did you nominate #{@hero.name}?"
+- content_for(:title, "Tell a story about #{@hero.name}!")
+
+%h2 Stories help your nominated hero gain more votes.
 
 = simple_form_for [@campaign, @hero, @story] do |f|
-  = f.input :body
-  = f.submit
+  = f.input :body, placeholder: "Type your sweet story about #{@hero.name} here!", label: false, input_html: { rows: 15, cols: 40 }
+  = f.submit "Submit this story", class: :button

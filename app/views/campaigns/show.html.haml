@@ -1,16 +1,15 @@
-%h1= "#{@campaign.title}"
-%h2= "Sponsored by #{@campaign.sponsoring_company}"
-%h3= "#{@campaign.city}, #{@campaign.state}"
+- content_for(:title, "#{@campaign.title}")
 
-%h3= "Campaign Description"
+%h1= "Sponsored by #{@campaign.sponsoring_company}"
+%h2= "#{@campaign.city}, #{@campaign.state}"
+
+%h2= "Campaign Description"
 %p= "#{@campaign.description}"
 %p= "Prize Amount: $#{@campaign.prize_amount}"
 
-= link_to "Nominate a Hero", new_campaign_hero_path(@campaign)
+= link_to "Nominate a Hero", new_campaign_hero_path(@campaign), class: :button
 
 %h3= "Hero Nominees"
-- @campaign.heroes.all.each do |hero|
-  %ul
-    %li
-      = link_to "#{hero.name}", campaign_hero_path(@campaign, hero)
+.nominees
+  = render @campaign.heroes
 

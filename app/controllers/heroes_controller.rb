@@ -2,6 +2,7 @@ class HeroesController < ApplicationController
   def new
     @campaign = Campaign.find(params[:campaign_id])
     @hero = @campaign.heroes.new
+    @pictures = @hero.pictures.new
   end
 
   def create
