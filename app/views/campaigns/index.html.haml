@@ -1,0 +1,6 @@
+%h1 Active Campaigns
+
+- @campaigns.each do |campaign|
+  %ul
+    %li
+      = link_to "#{campaign.title}", campaign_path(campaign)
