@@ -1,0 +1,4 @@
+%h1 Nominate a Hero
+= form_for [@campaign, @hero] do |f|
+	= f.text_field :name
+	= f.submit "Nominate a Hero"
