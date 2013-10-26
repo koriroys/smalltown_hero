@@ -14,10 +14,16 @@
 @import "bourbon";
 @import "neat";
 @import "home";
-$default-button-color: white;
+$dark:    #343838;
+$dark-80: #005F6B;
+$dark-50: #008C9E;
+$dark-20: #00B4CC;
+$dark-0:  #00DFFC;
+$text-color: #FF5C00;
 
 .button {
-  @include button($default-button-color);
+  @include button($dark);
+  color: $text-color;
   width: 15%;
   display: block;
   text-align: center;
@@ -26,3 +32,21 @@ $default-button-color: white;
   box-shadow: rgba(0, 0, 0, 0.6) 0 1px 0 0;
   margin-bottom: 1em;
 }
+
+body {
+  // background-color: #272F5D;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  min-width: 970px;
+  line-height: normal;
+}
+
+html {
+  @include linear-gradient(to top, $dark, $dark-20);
+}
+
+html {
+  height:100%
+}
+
