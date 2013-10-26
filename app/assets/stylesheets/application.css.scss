@@ -9,5 +9,20 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
+
+@import "bourbon";
+@import "neat";
+@import "home";
+$default-button-color: white;
+
+.button {
+  @include button($default-button-color);
+  width: 15%;
+  display: block;
+  text-align: center;
+  font-size: em(17);
+  text-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 1px 0 0;
+  margin-bottom: 1em;
+}

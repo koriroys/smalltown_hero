@@ -1,6 +1,6 @@
 %h1 Active Campaigns
 
 - @campaigns.each do |campaign|
-  %ul
+  %ul{style: "list-style: none;"}
     %li
-      = link_to "#{campaign.title}", campaign_path(campaign)
+      = link_to "#{campaign.title}", campaign_path(campaign), class: :button

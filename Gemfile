@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "bourbon"
+gem "neat"
 gem "rails", "4.0.0"
 gem "pg"
 gem "sass-rails", "~> 4.0.0"

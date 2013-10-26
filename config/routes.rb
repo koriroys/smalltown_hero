@@ -6,4 +6,6 @@ SmalltownHero::Application.routes.draw do
       resources :pictures
     end
   end
+
+  root to: "home#index"
 end
