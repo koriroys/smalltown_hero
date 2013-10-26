@@ -15,7 +15,8 @@ chicago_ccsso = Campaign.create(
   end_date:1.month.from_now,
   description: CCSSO_DESCRIPTION,
   prize_amount:10000,
-  sponsoring_company:"CCSSO"
+  sponsoring_company:"CCSSO",
+  title: "Chicago Teacher of the Year"
 )
 
 ["Anne Sullivan", "Maria Montessori", "William McGuffey", "Emma Willard", "Jaime Escalante"].each do |teacher|
@@ -29,7 +30,8 @@ nyc_ccsso = Campaign.create(
   end_date:1.month.from_now,
   description: CCSSO_DESCRIPTION,
   prize_amount:10000,
-  sponsoring_company:"CCSSO"
+  sponsoring_company:"CCSSO",
+  title: "New York City Teacher of the Year"
 )
 
 ["Clara Barton", "Alexander Graham Bell", "Dan Blocker", "Laura Bush", "Jimmy Carter"].each do |teacher|
@@ -43,7 +45,8 @@ sf_ccsso = Campaign.create(
   end_date:1.month.from_now,
   description: CCSSO_DESCRIPTION,
   prize_amount:10000,
-  sponsoring_company:"CCSSO"
+  sponsoring_company:"CCSSO",
+  title: "San Francisco Teacher of the Year"
 )
 
 ["Clarence Darrow", "Roberta Flack", "John Fowles", "Robert Frost", "Art Garfunkel"].each do |teacher|
